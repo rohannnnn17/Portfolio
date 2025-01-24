@@ -1,4 +1,5 @@
-"use client"; // Add this for Next.js
+// app/page.tsx
+"use client"; // Add this directive to indicate client-side code
 
 import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
@@ -12,8 +13,8 @@ import "aos/dist/aos.css"; // Import the AOS stylesheet
 const App: React.FC = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: "ease-in-out", // Animation easing function
+      duration: 1000, // Animation duration (in ms)
+      easing: "ease-in-out",
       once: true, // Whether animation should happen only once
     });
   }, []);
