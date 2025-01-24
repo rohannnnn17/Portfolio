@@ -6,7 +6,7 @@ const About: React.FC = () => {
       id="about"
       className="py-20 bg-cover bg-center text-white text-center relative"
       style={{ backgroundImage: "url('/assets/background-about.jpg')" }}
-      data-aos="fade-up" // AOS fade-up effect
+      data-aos="fade-up"
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 max-w-4xl mx-auto px-6">
