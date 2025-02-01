@@ -26,14 +26,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <a
-        href={githubLink || "#"}
+        href={githubLink ? githubLink : "#"}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`View ${title} on GitHub`}
-        className={`inline-block text-sm font-medium text-gray-900 hover:text-gray-700 transition-all duration-300 ${
-          !githubLink && "opacity-50 cursor-not-allowed"
-        }`}
-        disabled={!githubLink}>
+        aria-label="GitHub link"
+        className={`some-class ${
+          !githubLink && "opacity-50 pointer-events-none"
+        }`}>
         {githubLink ? "View on GitHub →" : "Coming Soon"}
       </a>
     </div>
