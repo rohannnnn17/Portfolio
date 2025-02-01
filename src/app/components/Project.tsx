@@ -4,6 +4,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   githubLink: string;
+  deployedLink?: string; // Optional deployed URL
   imageUrl?: string; // Optional image for the project
 }
 
@@ -11,6 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   githubLink,
+  deployedLink,
   imageUrl,
 }) => (
   <div className="group relative bg-gray-900 rounded-lg border border-gray-800 overflow-hidden transition-all duration-300 hover:border-teal-300/30">
@@ -25,24 +27,36 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="p-6">
       <h3 className="text-xl font-medium text-gray-100 mb-2">{title}</h3>
       <p className="text-gray-400 mb-4">{description}</p>
-      <a
-        href={githubLink || "#"}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`View ${title} on GitHub`}
-        className={`inline-flex items-center text-sm font-mono text-teal-300 hover:text-teal-200 transition-colors duration-300 ${
-          !githubLink && "opacity-50 cursor-not-allowed"
-        }`}
-        disabled={!githubLink}>
-        {githubLink ? (
-          <>
-            <span>View on GitHub</span>
-            <span className="ml-2">→</span>
-          </>
-        ) : (
-          "Coming Soon"
+      <div className="flex flex-col space-y-3">
+        {deployedLink && (
+          <a
+            href={deployedLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${title} live site`}
+            className="inline-flex items-center text-sm font-mono text-teal-300 hover:text-teal-200 transition-colors duration-300">
+            <span>Visit Live Site</span>
+            <span className="ml-2">↗</span>
+          </a>
         )}
-      </a>
+        <a
+          href={githubLink ? githubLink : "#"}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${title} on GitHub`}
+          className={`inline-flex items-center text-sm font-mono text-teal-300 hover:text-teal-200 transition-colors duration-300 ${
+            !githubLink && "opacity-50 pointer-events-none"
+          }`}>
+          {githubLink ? (
+            <>
+              <span>View on GitHub</span>
+              <span className="ml-2">→</span>
+            </>
+          ) : (
+            "Coming Soon"
+          )}
+        </a>
+      </div>
     </div>
   </div>
 );
@@ -54,21 +68,22 @@ const Projects: React.FC = () => {
       description:
         "A travel planning tool designed to help users discover and organize their travel experiences with ease.",
       githubLink: "https://github.com/rohannnnn17/WanderWise",
-      imageUrl: "https://via.placeholder.com/400x200", // Replace with actual image URL
+      deployedLink: "https://wanderwise-1.onrender.com",
+      imageUrl: "/assets/logo_wanderwise.png", // Replace with actual image URL
     },
     {
       title: "Denty App",
       description:
         "A web-based solution to streamline dental clinic operations, from patient management to appointment scheduling.",
       githubLink: "https://github.com/JeansPanT/Denty",
-      imageUrl: "https://via.placeholder.com/400x200", // Replace with actual image URL
+      imageUrl: "https://picsum.photos/200/300", // Replace with actual image URL
     },
     {
       title: "Employee Management System",
       description:
         "A system for admins to store, update, and track employee information and attendance records.",
       githubLink: "", // Add your link here
-      imageUrl: "https://via.placeholder.com/400x200", // Replace with actual image URL
+      imageUrl: "https://picsum.photos/200/300", // Replace with actual image URL
     },
   ];
 
