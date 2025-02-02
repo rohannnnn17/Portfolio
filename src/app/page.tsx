@@ -1,33 +1,29 @@
 // app/page.tsx
-"use client"; // Add this directive to indicate client-side code
+"use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Project";
 import Contact from "./components/Contact";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import the AOS stylesheet
+import "aos/dist/aos.css";
 
-const App: React.FC = () => {
+export default function Home() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration (in ms)
-      easing: "ease-in-out",
-      once: true, // Whether animation should happen only once
-    });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   );
-};
-
-export default App;
+}
