@@ -85,6 +85,13 @@ const Projects: React.FC = () => {
       githubLink: "https://github.com/JeansPanT/EasyAllSolution",
       imageUrl: "./easyallsolution.svg",
     },
+    {
+      title: "EV Website",
+      description:
+        "A website for a fictional electric vehicle company, showcasing the latest models and features.",
+      githubLink: "https://github.com/rohannnnn17/ev-website",
+      imageUrl: "https://picsum.photos/200/300",
+    },
 
     {
       title: "Employee Management System",
