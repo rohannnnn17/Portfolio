@@ -90,6 +90,7 @@ const Projects: React.FC = () => {
       description:
         "A website for a fictional electric vehicle company, showcasing the latest models and features.",
       githubLink: "https://github.com/rohannnnn17/ev-website",
+      deployedLink: "https://ev-website-7uxw.onrender.com/",
       imageUrl: "https://picsum.photos/200/300",
     },
 
