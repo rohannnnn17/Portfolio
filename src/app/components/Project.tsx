@@ -76,8 +76,16 @@ const Projects: React.FC = () => {
       description:
         "A web-based solution to streamline dental clinic operations, from patient management to appointment scheduling.",
       githubLink: "https://github.com/JeansPanT/Denty",
-      imageUrl: "https://picsum.photos/200/300", // Replace with actual image URL
+      imageUrl: "/denty.svg", // Replace with actual image URL
     },
+    {
+      title: "Easy all Solution",
+      description:
+        "EasyAllSolution is a full-stack web platform designed for a laptop repair shop that also sells refurbished laptops and accessories. Built with React.js for the frontend and Spring Boot for the backend, it streamlines repair services and product sales, enhancing user experience and operational efficiency.",
+      githubLink: "https://github.com/JeansPanT/EasyAllSolution",
+      imageUrl: "./easyallsolution.svg",
+    },
+
     {
       title: "Employee Management System",
       description:
