@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   deployedLink,
   imageUrl,
 }) => (
-  <div className="group relative bg-gray-900 rounded-lg border border-gray-800 overflow-hidden transition-all duration-300 hover:border-teal-300/30">
+  <div className="group relative bg-black rounded-lg border border-gray-800 overflow-hidden transition-all duration-300 hover:border-teal-300/30">
     {imageUrl && (
       <img
         src={imageUrl}
@@ -90,7 +90,7 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects"
-      className="relative py-20 lg:py-28 bg-gray-950 border-b border-gray-800"
+      className="relative py-20 lg:py-28 bg-black border-b border-gray-800"
       role="region"
       aria-labelledby="projects-heading">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">

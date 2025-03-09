@@ -5,7 +5,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative py-24 lg:py-32 bg-gray-950 border-b border-gray-800"
+      className="relative py-24 lg:py-32 bg-black border-b border-gray-800" // Changed bg-gray-950 to bg-black
       role="region"
       aria-labelledby="about-heading">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
