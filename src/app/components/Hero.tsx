@@ -4,29 +4,39 @@ import React from "react";
 const Hero: React.FC = () => {
   return (
     <section
-      className="relative text-white h-screen"
-      data-aos="fade-in" // Adding animation effect
+      className="relative h-screen w-full overflow-hidden text-white"
+      data-aos="fade-in"
     >
-      {/* Background video */}
+      {/* Background Video */}
       <video
+        className="absolute inset-0 z-0 h-full w-full object-cover"
         autoPlay
-        loop
         muted
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/assets/background-video.mp4" // Correct path to the video file
-      ></video>
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source
+          src="/assets/background-video.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-      {/* Overlay for text visibility */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 z-10 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex justify-center items-center text-center h-full">
+      <div className="relative z-20 flex h-full items-center justify-center px-6 text-center">
         <div className="max-w-4xl">
-          <h1 className="text-5xl font-bold">Hi, I&apos;m Rohan</h1>
-          <p className="mt-4 text-xl text-gray-300 max-w-lg mx-auto">
-            I&apos;m a BCA student passionate about technology, problem-solving,
-            and developing innovative solutions. Currently working on various
-            exciting projects.
+          <h1 className="text-5xl font-bold">
+            Hi, I&apos;m Rohan
+          </h1>
+
+          <p className="mx-auto mt-4 max-w-lg text-xl text-gray-300">
+            I&apos;m a BCA student passionate about technology,
+            problem-solving, and developing innovative solutions.
+            Currently working on various exciting projects.
           </p>
         </div>
       </div>
