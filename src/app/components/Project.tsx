@@ -157,33 +157,35 @@ const Projects: React.FC = () => {
       aria-labelledby="projects-heading"
     >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2
-              id="projects-heading"
-              className="flex items-center text-2xl font-medium text-gray-100 md:text-3xl"
-            >
-              <span className="mr-3 font-mono text-teal-300">02.</span>
-              Selected Work
-            </h2>
+        <div className="mx-auto max-w-4xl">
+          {/* Section Header */}
+          <div className="mb-10">
+            <div className="flex items-center justify-between">
+              <h2
+                id="projects-heading"
+                className="flex items-center text-2xl font-medium text-gray-100 md:text-3xl"
+              >
+                <span className="mr-3 font-mono text-teal-300">02.</span>
+                Selected Work
+              </h2>
 
-            <p className="mt-2 max-w-xl text-sm text-gray-500">
-              A selection of projects I've built while exploring software
+              <span className="hidden font-mono text-xs text-gray-600 sm:block">
+                04 PROJECTS
+              </span>
+            </div>
+
+            <p className="mt-3 max-w-xl text-sm text-gray-500">
+              A selection of projects I&apos;ve built while exploring software
               development and modern web technologies.
             </p>
           </div>
 
-          <span className="hidden font-mono text-xs text-gray-600 sm:block">
-            04 PROJECTS
-          </span>
-        </div>
-
-        {/* Projects */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.number} {...project} />
-          ))}
+          {/* Projects */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {projects.map((project) => (
+              <ProjectCard key={project.number} {...project} />
+            ))}
+          </div>
         </div>
       </div>
 
