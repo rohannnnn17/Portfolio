@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
         {/* Contact CTA */}
         <div className="mt-8">
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:pawar17rohan@gmail.com"
             className="inline-flex items-center rounded-lg border border-teal-300 px-6 py-3 font-mono text-sm text-teal-300 transition-all duration-300 hover:bg-teal-300/10"
           >
             Get In Touch
